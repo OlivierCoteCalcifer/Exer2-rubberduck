@@ -29,7 +29,7 @@ class Canard implements Cloneable {
     /**
      * TODO Pas très SOLID comme approche mais c'est pour simplifier l'exercice ... Devrait être encapsuler dans une classe.
      */
-    void genererPlan() {
+    public void genererPlan() {
         try {
             System.out.println("--- Début de la génération du modèle 3D ... ---");
 
