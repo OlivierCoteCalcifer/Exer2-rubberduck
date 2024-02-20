@@ -3,22 +3,40 @@ package classes.builder;
 import classes.Canard;
 
 /**
- * Permet la création d'un canard bleu.
+ * Cette classe est le builder pour un canard bleu.
  *
  * @author Olivier Côté
- *
+ * @author Benjamin Thériault
  */
 public class CanardBleuBuilder implements Builder{
 
+    /**
+     *
+     */
     private Canard canardBleu;
 
+    /**
+     *
+     */
     public CanardBleuBuilder() {
         reset();
     }
 
+    /**
+     *
+     */
     @Override
     public void reset() {
         canardBleu = new Canard();
+    }
+
+    /**
+     *
+     * @return String typeCanard
+     */
+    @Override
+    public String getTypeCanard() {
+        return "BLEU";
     }
 
     @Override

@@ -17,18 +17,30 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        //Tentative de concevoir un canard rouge.
-        System.out.println("TEST - Création d'un canard en caoutchouc rouge");
-        // Pour la section qui retourne le nombre de canard en cache
-        // et le message si le prototype est existant.
-        // On va pop les messages par une fonction par le gestionnaire de protpotype.
-        Directeur directeur = new Directeur();
         Builder canardRougeBuilder= new CanardRougeBuilder();
-        directeur.setBuilder(canardRougeBuilder);
-        directeur.creerCanard();
-        Canard canardRouge1 = canardRougeBuilder.getCanard();
+        Builder canardBleuBuilder = new CanardBleuBuilder();
+        Directeur directeur = new Directeur();
 
-        System.out.println("TEST - Création d'un canard en caoutchouc rouge");
-        directeur.creerCanard();
+        System.out.println("\nTEST - Création d'un canard en caoutchouc rouge");
+        directeur.setBuilder(canardRougeBuilder);
+        Canard cRouge1 = directeur.creerCanard();
+
+        System.out.println("\nTEST - Création d'un canard en caoutchouc rouge");
+        Canard cRouge2 = directeur.creerCanard();
+
+
+        System.out.println("\nTEST - Création d'un canard en caoutchouc bleu");
+        directeur.setBuilder(canardBleuBuilder);
+        Canard b1 = directeur.creerCanard();
+
+
+        System.out.println("\nTEST - Création d'un canard en caoutchouc rouge");
+        directeur.setBuilder(canardRougeBuilder);
+        Canard cRouge3 = directeur.creerCanard();
+
+
+        System.out.println("\nTEST - Création d'un canard en caoutchouc bleu");
+        directeur.setBuilder(canardBleuBuilder);
+        Canard b2 = directeur.creerCanard();
     }
 }
