@@ -15,7 +15,7 @@ public class Main {
     /**
      * Méthode permettant l'exécution du programme.
      *
-     * @param args
+     * @param args Aucun input
      */
     public static void main(String[] args) {
         Builder canardRougeBuilder = new CanardRougeBuilder();

@@ -7,16 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Cette classe est le singleton pour le registre des canard.
+ * Cette classe est le singleton pour le registre des canards.
  *
  * @author Olivier Côté
  * @author Benjamin Theriault
  */
-public class SingletonRegistreCanard {
+public final class SingletonRegistreCanard {
+
     /**
      *
      */
-    private static SingletonRegistreCanard instance;
+    private static SingletonRegistreCanard instance = null;
     /**
      *
      */
@@ -26,6 +27,7 @@ public class SingletonRegistreCanard {
      *
      */
     private SingletonRegistreCanard() {
+
     }
 
     /**
@@ -63,7 +65,6 @@ public class SingletonRegistreCanard {
         }
         return true;
     }
-
 
     /**
      *
