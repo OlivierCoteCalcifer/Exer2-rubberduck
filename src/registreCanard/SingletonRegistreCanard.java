@@ -5,6 +5,7 @@ import classes.builder.Builder;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Cette classe est le singleton pour le registre des canard.
  *
@@ -48,22 +49,18 @@ public class SingletonRegistreCanard {
      *
      */
     public Canard getParTypeCanard(Builder builder) {
-        if (prototypes.containsKey(builder.getTypeCanard())) {
-            Canard prototype = prototypes.get(builder.getTypeCanard());
-            System.out.println("Prototype récupéré en cache : " + builder.getTypeCanard());
-            return prototype.clone();
-        }
-        return null;
+        System.out.println("Prototype récupéré en cache : " + builder.getTypeCanard());
+        return prototypes.get(builder.getTypeCanard()).clone();
     }
 
     /**
      *
      */
     public boolean prototypeExiste(Builder builder) {
-        if(!prototypes.containsKey(builder.getTypeCanard())){
+        if (!prototypes.containsKey(builder.getTypeCanard())) {
             System.out.println("Prototype non existant. Création du prototype : " + builder.getTypeCanard());
             return false;
-        };
+        }
         return true;
     }
 

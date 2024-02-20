@@ -9,11 +9,39 @@ import classes.Canard;
  * @author Benjamin Thériault
  */
 public interface Builder {
+    /**
+     *
+     */
     void reset();
+
+    /**
+     *
+     */
+    String getTypeCanard();
+
+    /**
+     *
+     */
     void ajouterTete();
+
+    /**
+     *
+     */
     void ajouterCorps();
+
+    /**
+     *
+     */
     void ajouterAiles();
+
+    /**
+     *
+     */
     void ajouterHabit();
+
+    /**
+     *
+     */
     Canard getCanard();
 
 }

@@ -8,7 +8,7 @@ import classes.Canard;
  * @author Olivier Côté
  * @author Benjamin Thériault
  */
-public class CanardBleuBuilder implements Builder{
+public class CanardBleuBuilder implements Builder {
 
     /**
      *
@@ -31,7 +31,6 @@ public class CanardBleuBuilder implements Builder{
     }
 
     /**
-     *
      * @return String typeCanard
      */
     @Override
@@ -41,7 +40,6 @@ public class CanardBleuBuilder implements Builder{
 
     @Override
     public void ajouterTete() {
-
     }
 
     @Override

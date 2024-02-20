@@ -3,6 +3,7 @@ import classes.builder.Builder;
 import classes.builder.CanardBleuBuilder;
 import classes.builder.CanardRougeBuilder;
 import classes.director.Directeur;
+import registreCanard.SingletonRegistreCanard;
 
 /**
  * Classe main.
@@ -12,12 +13,12 @@ import classes.director.Directeur;
  */
 public class Main {
     /**
-     *  Méthode permettant l'exécution du programme.
+     * Méthode permettant l'exécution du programme.
      *
      * @param args
      */
     public static void main(String[] args) {
-        Builder canardRougeBuilder= new CanardRougeBuilder();
+        Builder canardRougeBuilder = new CanardRougeBuilder();
         Builder canardBleuBuilder = new CanardBleuBuilder();
         Directeur directeur = new Directeur();
 
@@ -42,5 +43,8 @@ public class Main {
         System.out.println("\nTEST - Création d'un canard en caoutchouc bleu");
         directeur.setBuilder(canardBleuBuilder);
         Canard b2 = directeur.creerCanard();
+
+        System.out.println(cRouge1 + "\n" + cRouge2 + "\n" + b1 + "\n" + cRouge3 + "\n" + b2);
+        System.out.println(SingletonRegistreCanard.getInstance());
     }
 }
