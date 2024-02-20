@@ -12,23 +12,26 @@ import registreCanard.SingletonRegistreCanard;
  */
 public class Directeur {
     /**
-     *
+     * Cette propriété représente le builder que le directeur doit gérer.
      */
-    Builder builder;
+    private Builder builder;
     /**
-     *
+     * Cette propriété est un singleton pour le registre des modèles de canards.
      */
-    SingletonRegistreCanard registreCanard = SingletonRegistreCanard.getInstance();
+    private final SingletonRegistreCanard registreCanard = SingletonRegistreCanard.getInstance();
 
     /**
-     *
+     * Méthode setter pour attribuer le builder au champ.
      */
     public void setBuilder(Builder builder) {
         this.builder = builder;
     }
 
     /**
+     * Cette méthode enclenche le processus en suivant les étapes précises pour
+     * la conception d'un modèle de canard.
      *
+     * @return Canard On retourne un canard créé par le builder.
      */
     public Canard creerCanard() {
         registreCanard.getCount();

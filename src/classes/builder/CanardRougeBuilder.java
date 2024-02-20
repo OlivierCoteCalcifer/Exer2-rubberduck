@@ -9,20 +9,21 @@ import classes.Canard;
  * @author Benjamin Theriault
  */
 public class CanardRougeBuilder implements Builder {
+
     /**
-     *
+     * Instance de canard rouge.
      */
     private Canard canardRouge;
 
     /**
-     *
+     *  Permet la construction d'un canard bleu.
      */
     public CanardRougeBuilder() {
         reset();
     }
 
     /**
-     *
+     * Permet la réinitialisation d'un canard rouge.
      */
     @Override
     public void reset() {
@@ -30,7 +31,9 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
+     * Permet de récupérer le type du canard.
      *
+     * @return le type de canard.
      */
     @Override
     public String getTypeCanard() {
@@ -38,7 +41,7 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
-     *
+     * Permet d'ajouter la tête du canard.
      */
     @Override
     public void ajouterTete() {
@@ -46,7 +49,7 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
-     *
+     * Permet d'ajouter le corps du canard.
      */
     @Override
     public void ajouterCorps() {
@@ -54,7 +57,7 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
-     *
+     * Permet d'ajouter les ailes du canard.
      */
     @Override
     public void ajouterAiles() {
@@ -62,7 +65,7 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
-     *
+     * Permet d'ajouter l'habit du canard.
      */
     @Override
     public void ajouterHabit() {
@@ -70,7 +73,9 @@ public class CanardRougeBuilder implements Builder {
     }
 
     /**
-     * @return Canard
+     * Permet de récupérer le canard rouge.
+     *
+     * @return Canard camard rouge.
      */
     @Override
     public Canard getCanard() {

@@ -3,7 +3,6 @@ import classes.builder.Builder;
 import classes.builder.CanardBleuBuilder;
 import classes.builder.CanardRougeBuilder;
 import classes.director.Directeur;
-import registreCanard.SingletonRegistreCanard;
 
 /**
  * Classe main.
@@ -32,7 +31,7 @@ public class Main {
 
         System.out.println("\nTEST - Création d'un canard en caoutchouc bleu");
         directeur.setBuilder(canardBleuBuilder);
-        Canard b1 = directeur.creerCanard();
+        Canard cBleu1 = directeur.creerCanard();
 
 
         System.out.println("\nTEST - Création d'un canard en caoutchouc rouge");
@@ -42,9 +41,18 @@ public class Main {
 
         System.out.println("\nTEST - Création d'un canard en caoutchouc bleu");
         directeur.setBuilder(canardBleuBuilder);
-        Canard b2 = directeur.creerCanard();
+        Canard cBleu2 = directeur.creerCanard();
 
-        System.out.println(cRouge1 + "\n" + cRouge2 + "\n" + b1 + "\n" + cRouge3 + "\n" + b2);
-        System.out.println(SingletonRegistreCanard.getInstance());
+        /*
+        // On affiche dans la console que les modèles sont tous des objets différents
+        // grâce au clonage.
+        System.out.println("Adresse différente pour chaque modèle:\n"
+                            + "cRouge1 " + cRouge1+ "\n"
+                            + "cRouge2 " + cRouge2+ "\n"
+                            + "cRouge3 " + cRouge3+ "\n"
+                            + "cBleu1 " + cBleu1 + "\n"
+                            + "cBleu2 " + cBleu2 + "\n" );
+        */
+
     }
 }
